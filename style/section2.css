@@ -1,0 +1,193 @@
+/* Section #2 */
+/* .sectionGame {
+    display: none;
+} */
+
+.sectionGameInside {
+    height: 100vh;
+    padding: 50px 30px;
+}
+
+/*PLAYER*/
+.playerView {
+    width: 600px;
+    height: 310px;
+    margin: 5px auto 15px auto;
+    padding: 0;
+
+    border: 3px solid rgba(0,0,0,0.7);
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #222831,#295939);
+    box-shadow: 4px 5px 3px rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.charInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 500px;
+    height: 180px;
+    margin-bottom: 25px;
+}
+
+.charInfo > img {
+    grid-column: span 1;
+    width: 180px;
+    height: 180px;
+    border: 8px groove rgba(136, 48, 78, 1)
+}
+
+.statsBoxSec2 {
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.skillBar {
+    width: 550px;
+    height: 20px;
+    margin: 10px 25px;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.skillBar > h2 {
+    padding: 5px;
+    border: 3px solid rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.5);
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 20px;
+}
+
+.skillBar > h2:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(0.92);
+}
+
+.skillBar > h2:active {
+    transform: scale(1.2);
+}
+
+#playerHp {
+    color:rgb(42, 173, 42);
+}
+#playerMp {
+    color:steelblue;
+}
+
+#enemyHp {
+    color:rgb(42, 173, 42);
+}
+#enemyMp {
+    color:steelblue;
+}
+
+/* ----------------------------- */
+
+/*CONSOLE*/
+.consoleView {
+    width: 450px;
+    height: 200px;
+    margin: 5px auto;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+
+    border: 3px solid rgba(0,0,0,0.7);
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #311d3f,#88304e);
+    box-shadow: 2px 2px 15px 10px rgba(0,0,0,0.7);
+
+    font-family: 'Russo One', sans-serif;
+    color:rgba(222, 222, 222, 1);
+}
+
+.consoleList {
+    list-style-type: none;
+    padding: 5px 0;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/* ----------------------------- */
+
+/*ENEMY*/
+.enemyView {
+    width: 600px;
+    height: 230px;
+    margin: 15px auto 0 auto;
+    padding: 0;
+
+    border: 3px solid rgba(0,0,0,0.7);
+    border-radius: 5px;
+    background: linear-gradient(to top, #222831,#295939);
+    box-shadow: 4px 5px 3px rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.enemyInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 500px;
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+.enemyInfo > img {
+    grid-column: span 1;
+    width: 180px;
+    height: 180px;
+    border: 8px groove rgba(136, 48, 78, 1);
+    /* padding: 0 25px; */
+
+}
+/* ----------------------------- */
+
+/*Hovers and Stuff*/
+
+/* -------------------- */
+
+
+#muteMusicImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin: 7px; 
+    width: 45px;
+    height: 45px;
+    border: 2px solid rgba(0,0,0,0.7);
+    border-radius: 5px;
+}
+
+.muteBtnOn {
+    background-color: #96bb7c;
+    padding: 2px 2px;
+}
+
+.muteBtnOff {
+    background-color: #f05454;
+    padding: 2px 5px 2px 0;
+}
+
+/* #Section #2 Done!# */
+

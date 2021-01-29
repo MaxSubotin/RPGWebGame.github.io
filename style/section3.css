@@ -1,0 +1,68 @@
+.sectionEnd {
+    background-color: rgba(0,0,0,0.9);
+    width: 85vw;
+    height: 85vh;
+    margin: 45px auto;
+
+}
+
+.endGameBox {
+    width: 600px;
+    height: 125px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-content:stretch;
+    flex-direction: row;
+}
+
+.sectionEnd > h1 {
+    color: rgba(222, 222, 222, 1);
+    font-size: 150px;
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.endGameBox > button {
+    flex-basis: 50px;
+    flex-grow: 1;
+    margin: 0 25px;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, #311d3f,#88304e);
+    color: rgba(222, 222, 222, 1);
+
+    font-size: 35px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+
+.backClassSelectBtn:hover {
+    cursor: pointer;
+    transition: 0.4s;
+    transform: scale(0.92);
+}
+
+.backClassSelectBtn:focus {
+    outline: none;
+    background: linear-gradient(to bottom, #522546,#e23e57);
+}
+
+.nextGameBtn:hover {
+    cursor: pointer;
+    transition: 0.4s;
+    transform: scale(0.92);
+}
+
+.nextGameBtn:focus {
+    outline: none;
+    background: linear-gradient(to bottom, #522546,#e23e57);
+}
+
+
+
+.disabledBtn {
+    opacity: 0.35;
+}

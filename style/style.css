@@ -1,0 +1,88 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap'); /*Headlines  //   font-family: 'Acme', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap'); /*Damage div  //  font-family: 'Russo One', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /*Paras and anything elss   //   font-family: 'Balsamiq Sans', cursive;*/
+
+/* Colors */
+/* https://colorhunt.co/palette/212648 */
+/* https://colorhunt.co/palette/15697 */
+/* https://colorhunt.co/palette/2763 */
+
+/* General Styles */
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+html {
+    font-size: 12px; /* 1rem = 12px */
+    overflow: hidden;
+}
+
+body {
+    background-image: url("../images/background-1.jpg");
+    background-color: #cccccc;
+}
+
+button {
+    user-select: none;
+}
+
+.maxLogo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    padding-right: 15px;
+    width: 200px;
+    height: auto;
+}
+
+.turnsWins {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 20px;
+    padding: 10px 15px;
+    font-family: 'Balsamiq Sans', cursive;
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.version {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Balsamiq Sans', cursive;
+    color: rgba(0, 0, 0, 1);
+}
+
+.sectionDefault {
+    height: 100vh; /*this has a overflow that makes a scroll bar but it is dissabled above in the html css*/
+    width: 65vw;
+    margin: 0 auto;
+    padding: 15px 0;
+
+    background-image: linear-gradient(to top, rgba(82, 37, 70, 0.75), rgba(136, 48, 78, 0.75));
+    color:rgba(222, 222, 222, 1);
+    font-size: 16px;
+}
+
+.classNameSpan {
+    color: #ffc60b; /*gold ish*/
+}
+
+.spanGreen {
+    color: #96bb7c;
+}
+.spanYello {
+    color: #f8dc81;
+}
+.spanRed {
+    color: #f05454;
+}
+/* --------------- */

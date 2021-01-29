@@ -1,0 +1,74 @@
+/* Section #1 */
+/* .sectionStart {
+    display: none;
+} */
+
+.sectionStartInside {
+    height: 60vh;
+    padding: 0 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.h1ChooseClass {
+    font-size: 6rem;
+    font-family: 'Acme', sans-serif;
+    grid-column: span 3;
+    justify-self: center;
+    align-self: center;
+}
+
+.classCard {
+    border: 3px solid rgba(0,0,0,1);
+    border-radius: 5px;
+    box-shadow: 5px 10px 5px rgba(0,0,0,0.5);
+
+    background: linear-gradient(to top, #222831,#393e46);
+    width: auto;
+    height: 220px;
+
+    display: table;
+    margin: 5px 0;
+
+}
+
+.statsBox {
+    vertical-align:middle;
+    display:table-cell;
+    padding-right: 10px;
+
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.img {
+    vertical-align:middle;
+    display:table-cell;
+    padding: 8px;
+/*adding width will indicates where will the text of stats be. because img has width 125px anything less then that will not change anything*/
+}
+
+.img > img {
+    width: 110px; /*changes img size*/
+    height: 110px;
+    vertical-align:middle;
+}
+
+/* Hovers and Stuff */
+.classCard:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+    box-shadow: 5px 10px 3px rgba(0,0,0,0.5);
+
+}
+
+.h1ChooseClass:hover {
+    cursor: default;
+}
+/* -------------------- */
+
+
+
+/* #Section #1 Done!# */

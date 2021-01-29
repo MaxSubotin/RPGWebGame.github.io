@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/section1.css">
+    <link rel="stylesheet" href="style/section2.css">
+    <link rel="stylesheet" href="style/section3.css">
+    <title>RPG Web Game</title>
+</head>
+<body>
+     <!-- positioned here to load before the hole page-->
+
+
+    <section id="section-start" class="sectionStart sectionDefault" style="display: none">  <!--this needs to be display grid and then the h1 will have a hole ro and the divs all in 1 row-->
+        <section class="sectionStartInside">
+
+            <h1 id="headerChooseClass" class="h1ChooseClass">Select Your Class</h1>
+
+            <div id="warrior-card" class="classCard">
+                <div class="img">
+                    <img src="images/war-icon-2.png" alt="warrior image">
+                </div>
+                
+                <div class="statsBox warriorStats">
+                    <p><span class="classNameSpan">Warrior</span> is a visious fighter that preffers to use his raw power and strangth to over come his foues.<br>The warrior has <span class="spanGreen">high</span> base health and strength, very <span class="spanRed">low</span> mana and intellect and <span class="spanYello">medium</span> dextirity.</p>
+                </div>
+            </div>
+
+            <div id="rogue-card" class="classCard">
+                <div class="img">
+                    <img src="images/rog-icon-2.png" alt="warrior image">
+                </div>
+                
+                <div class="statsBox rougeStats">
+                    <p><span class="classNameSpan">Rogue</span> is a very fast and dangerous fighter that uses his high dextirity to deal damage many times during a fight by sacrificing the amout of damage dealt by each attack.<br>The rogue has <span class="spanYello">medium</span> base health and strength, <span class="spanRed">low</span> mana and intellect and very <span class="spanGreen">high</span> dextirity.</p>
+                </div>
+            </div>
+            
+            <div id="mage-card" class="classCard">
+                <div class="img">
+                    <img src="images/mag-icon-2.png" alt="warrior image">
+                </div>
+                
+                <div class="statsBox mageStats">
+                    <p><span class="classNameSpan">Mage</span> is a powerfull fighter that relies on his mana and intellect to deal alot of damage useing magical spells. The mage has <span class="spanRed">low</span> base health and strength, <span class="spanGreen">high</span> mana and intellect and <span class="spanYello">medium</span> dextirity.</p>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+    <section id="section-game" class="sectionGame sectionDefault" style="display: none">
+        <section class="sectionGameInside">
+            <img id="muteMusicImg" src="">
+            <div id="player" class="playerView">
+                <div id="char-info" class="charInfo">
+                    <img id="classImg" src="" alt="char image">
+                    <div id="selectClassStats" class="statsBoxSec2">
+                        <h3 id="playerHp">Health = </h3>
+                        <h3 id="playerMp">Mana = </h3>
+                        <h3 id="playerStr">Strength = </h3>
+                        <h3 id="playerInt">Intellect = </h3>
+                        <h3 id="playerDex">Dexterity = </h3>
+                    </div>
+                </div>
+                <div id="skill-bar" class="skillBar">
+                    <h2 id="autoAttack">Auto Attack</h2>
+                    <h2 id="skill1"></h2>
+                    <h2 id="skill2"></h2>
+                </div>
+            </div>
+
+            <div id="console" class="consoleView">
+                <ul id="console-list" class="consoleList">
+                    <!--max of 11 li's look good-->
+                </ul>
+            </div>
+
+            <div id="enemy" class="enemyView">
+                <div id="enemy-info" class="enemyInfo">
+                    <img id="enemyImg" src="" alt="enemy image">
+                    <div id="enemyStats" class="statsBoxSec2">
+                        <h3 id="enemyHp">Health = </h3>
+                        <h3 id="enemyMp">Mana = </h3>
+                        <h3 id="enemyStr">Strength = </h3>
+                        <h3 id="enemyInt">Intellect = </h3>
+                        <h3 id="enemyDex">Dexterity = </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="section-end" class="sectionEnd" style="display: none">
+        <h1 id="endGameText"></h1>
+        <div class="endGameBox">
+            <button id="nextGame" class="nextGameBtn">Next Battle!</button>
+            <button id="backClassSelect" class="backClassSelectBtn">Choose Class</button>
+        </div>
+    </section>
+
+    <div id="turns-wins" class="turnsWins">
+        <h2>Turns: <span id="turnsNumber">0</span></h2>
+        <h2 id="winsNumber">Wins: 0</h2>
+    </div>
+
+    <h6 class="version">v0.0.1</h6>
+
+    <img class="maxLogo" src="images/max-rpg-logo.png" alt="">
+
+    <audio id="soundtrack" src="sounds/background-soundtrack-v1.mp3"></audio>
+
+    <script src="script/new-main.js"></script>
+
+</body>
+</html>
+
