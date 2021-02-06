@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/section1.css">
     <link rel="stylesheet" href="style/section2.css">
     <link rel="stylesheet" href="style/section3.css">
+    <link rel="stylesheet" href="style/phone.css">
     <title>RPG Web Game</title>
 </head>
 <body>
@@ -67,9 +68,10 @@
                 </div>
                 <div id="skill-bar" class="skillBar">
                     <h2 id="autoAttack">Auto Attack</h2>
-                    <h2 id="skill1"></h2>
-                    <h2 id="skill2"></h2>
+                    <h2 id="skill1"></h2><div id="hiddenSkill1Div"></div> <!-- <p class="invisTextDescription">this is some text filler</p> -->
+                    <h2 id="skill2"></h2><div id="hiddenSkill2Div"></div>
                 </div>
+                
             </div>
 
             <div id="console" class="consoleView">
@@ -102,11 +104,13 @@
     </section>
 
     <div id="turns-wins" class="turnsWins">
-        <h2>Turns: <span id="turnsNumber">0</span></h2>
         <h2 id="winsNumber">Wins: 0</h2>
+        <h2>Turns: <span id="turnsNumber">0</span></h2>
     </div>
 
-    <h6 class="version">v0.0.1</h6>
+    
+
+    <h6 class="version">v0.0.2</h6>
 
     <img class="maxLogo" src="images/max-rpg-logo.png" alt="">
 

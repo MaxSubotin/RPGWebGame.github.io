@@ -72,3 +72,21 @@
 
 
 /* #Section #1 Done!# */
+
+
+
+/* Medium Screen Fix */
+@media only screen and (max-width: 1750px) and (min-width: 1200px){
+    .classCard {
+        height: 300px;
+    }
+
+    .img {
+        padding: 5px;
+    }
+
+    .img > img {
+        width: 100px; 
+        height: 100px;
+    }
+}

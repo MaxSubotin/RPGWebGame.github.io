@@ -39,7 +39,7 @@
     grid-column: span 1;
     width: 180px;
     height: 180px;
-    border: 8px groove rgba(136, 48, 78, 1)
+    border: 8px groove rgba(85, 113, 116, 1)
 }
 
 .statsBoxSec2 {
@@ -70,6 +70,35 @@
     font-size: 20px;
 }
 
+#hiddenSkill1Div, #hiddenSkill2Div {
+    display: none;
+    width: 300px;
+    height: 170px;
+    padding: 10px;
+    border: 3px solid rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.5rem;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 20px;
+    position: absolute;
+    top: 13%;
+    right: 15%;
+}
+
+.skillInfoText {
+    color: aliceblue;
+    font-size: 3rem;
+}
+
+.skillBar > h2:hover + #hiddenSkill1Div {
+    display: block;
+}
+.skillBar > h2:hover + #hiddenSkill2Div {
+    display: block;
+}
+
 .skillBar > h2:hover {
     cursor: pointer;
     transition: 0.5s;
@@ -78,6 +107,17 @@
 
 .skillBar > h2:active {
     transform: scale(1.2);
+}
+
+.invisTextDescription {
+    /* visibility: hidden; */
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.invisTextDescription:hover {
+    visibility: visible;
+    opacity: 1;
 }
 
 #playerHp {
@@ -93,6 +133,7 @@
 #enemyMp {
     color:steelblue;
 }
+
 
 /* ----------------------------- */
 
@@ -116,12 +157,16 @@
 
 .consoleList {
     list-style-type: none;
-    padding: 5px 0;
+    padding: 0px 0;
 
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.consoleList > li {
+    font-size: 1.3rem;
 }
 /* ----------------------------- */
 
@@ -187,7 +232,26 @@
 .muteBtnOff {
     background-color: #f05454;
     padding: 2px 5px 2px 0;
+    opacity: 0.75;
 }
 
 /* #Section #2 Done!# */
 
+
+
+/* Medium Screen Fix */
+@media only screen and (max-width: 1750px) and (min-width: 1601px){
+    #hiddenSkill1Div, #hiddenSkill2Div {
+        font-size: 1.35rem;
+        padding-top: 20px;
+        right: 12%;
+    }
+}
+
+@media only screen and (max-width: 1600px) and (min-width: 1200px){
+    #hiddenSkill1Div, #hiddenSkill2Div {
+        font-size: 1.35rem;
+        padding-top: 20px;
+        right: 5%;
+    }
+}

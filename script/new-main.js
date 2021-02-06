@@ -65,8 +65,11 @@ let newEnemyHealth;
 const htmlAutoAttackBtn = document.getElementById('autoAttack');
 const htmlSkill1Btn = document.getElementById('skill1');
 const htmlSkill2Btn = document.getElementById('skill2');
+const htmlSkill1Info = document.getElementById('hiddenSkill1Div');
+const htmlSkill2Info = document.getElementById('hiddenSkill2Div');
 let htmlDamageConsole = document.getElementById('console');
 let htmlDamageConsoleUL = document.getElementById('console-list'); //if these were const not let
+
 
 
 
@@ -120,7 +123,7 @@ let fightLineText;
 const printFightTextPreFight = () => { //add text
     fightLine = document.createElement('li');
     fightLineText = document.createTextNode('FIGHT!');
-    fightLine.setAttribute("style","font-size: 130px; color: gold; opacity: 0.75; padding-bottom: 25px");
+    fightLine.setAttribute("style","font-size: 80px; color: gold; opacity: 0.75; padding-bottom: 45px");
     fightLine.appendChild(fightLineText);
     htmlDamageConsoleUL.appendChild(fightLine);
 }
@@ -134,13 +137,15 @@ const removeFightText = () => {  //remove text
 let enemyTroll = {};
 let enemyGoblin = {};
 let enemyID; //if we check what is the value of this we will know the name of the enemy (troll or goblin)
+const trollImages = ['images/troll-char-1.jpg','images/troll-char-2.jpg']; 
+const goblinImages = ['images/goblin-icon-1.jpg','images/goblin-icon-2.jpg']; 
+
 const prepEnemyCard = () => {
     let randomNumber = Math.floor(Math.random()*2);
     if (randomNumber === 0) {
         enemyTroll = new Enemy('enemy', 'troll', 200, 0, 11, 4, 9, 10);
 
         enemyID = enemyTroll.enemyName;
-        htmlEnemyImage.src = 'images/troll-char-1.jpg';
 
         enemyHp.innerText += ' ' + enemyTroll.health;
         enemyMp.innerText += ' ' + enemyTroll.mana;
@@ -150,11 +155,13 @@ const prepEnemyCard = () => {
 
         newEnemyHealth = enemyTroll.health;
 
+        let randomNumber2 = Math.floor(Math.random()*2);
+        htmlEnemyImage.src = trollImages[randomNumber2];
+
     } else if (randomNumber === 1) {
         enemyGoblin = new Enemy('enemy', 'goblin', 190, 0, 9, 4, 10, 10);
 
         enemyID = enemyGoblin.enemyName;
-        htmlEnemyImage.src = 'images/goblin-icon-1.jpg';
 
         enemyHp.innerText += ' ' + enemyGoblin.health;
         enemyMp.innerText += ' ' + enemyGoblin.mana;
@@ -163,6 +170,9 @@ const prepEnemyCard = () => {
         enemyDex.innerText += ' ' + enemyGoblin.dexterity;
 
         newEnemyHealth = enemyGoblin.health;
+
+        let randomNumber2 = Math.floor(Math.random()*2);
+        htmlEnemyImage.src = goblinImages[randomNumber2];
     }
 }
 
@@ -385,6 +395,62 @@ const prepSectionThreeScreen = () => {
     htmlSection3.style.display = "block";
 }
 
+// Function That gets a random image for the class
+const warriorImages = ['images/war-char-1.jpg','images/war-char-2.jpg'];
+const rogueImages = ['images/rog-char-1.jpg','images/rog-char-2.jpg'];
+const mageImages = ['images/mag-char-1.jpg','images/mag-char-2.jpg']; // ,'images/mag-char-3.jpg'
+
+const pickRandImage = (obj) => {
+    let whoAmI = obj
+    let randomNumber = Math.floor(Math.random()*2); // works with 2 images
+
+    switch (whoAmI) {
+        case 'warrior':
+            return warriorImages[randomNumber];
+        case 'rogue':
+            return rogueImages[randomNumber];
+        case 'mage':
+            return mageImages[randomNumber];
+    
+        default:
+            console.log('cant pick image');
+            break;
+    }
+}
+
+
+// The skills description   0,1 for warrior    2,3 for rogue    4,5 for mage:
+const skillDescription = [
+    "<span class='skillInfoText'>Mortal Strike</span><br> This is a powrfull attack that deals dubble damage <br><br> Costs 10 mana",
+    "<span class='skillInfoText'>Charge</span><br>Charge to the enemy and attack twice <br><br>Costs 5 mana and can only be used ONES per fight",
+    "<span class='skillInfoText'>Sinister Strike</span><br>A powrfull blow that deals alot of damage <br><br>Costs 10 mana",
+    "<span class='skillInfoText'>Instant Poison</span><br>Covers your weapons in poison, <br>EACH attack deals 10 more damage for the rest of the fight <br><br>Costs 10 mana and can only be used ONES per fight",
+    "<span class='skillInfoText'>Fire Ball</span><br>Lunch a masive fire ball to destroy your enemy <br><br>Costs 25 mana",
+    "<span class='skillInfoText'>Polymorph</span><br>Transforms your enemy into a sheep! <br>Now the enemy cant move for 1 turn <br><br>Costs 30 mana and can only be used ONES per fight",
+];
+
+// Function that applies the right description to the skill divs
+const skill1Info = (obj) => {
+    let whoAmI = obj
+    switch (whoAmI) {
+        case 'warrior':
+            htmlSkill1Info.innerHTML = skillDescription[0];
+            htmlSkill2Info.innerHTML = skillDescription[1];
+            break;
+        case 'rogue':
+            htmlSkill1Info.innerHTML = skillDescription[2];
+            htmlSkill2Info.innerHTML = skillDescription[3];
+            break;
+        case 'mage':
+            htmlSkill1Info.innerHTML = skillDescription[4];
+            htmlSkill2Info.innerHTML = skillDescription[5]; 
+            break;  
+        default:
+            console.log('cant pick skill description');
+            break;
+    }
+}
+
 
 const playerSelectWarClass = () => {  // WARRIOR
     prepSectionTwoScreen();
@@ -398,7 +464,7 @@ const playerSelectWarClass = () => {  // WARRIOR
     
     playerWarrior = new Player('player', 'warrior', 220, 25, 12, 4, 8, 10, 'Mortal Strike', 'Charge', true);
     prepPlayerCard(playerWarrior);
-    htmlClassImage.src = 'images/war-char-2.jpg';
+    htmlClassImage.src = pickRandImage('warrior');
     htmlSkill1Btn.innerHTML = playerWarrior.skill1Name;
     htmlSkill2Btn.innerHTML = playerWarrior.skill2Name;
 
@@ -406,6 +472,7 @@ const playerSelectWarClass = () => {  // WARRIOR
     playerClass = playerWarrior.className;
     newPlayerHealth = playerWarrior.health;
     newPlayerMana = playerWarrior.mana;
+    skill1Info('warrior');
 }
 
 const playerSelectRogClass = () => {  // ROGUE
@@ -420,7 +487,7 @@ const playerSelectRogClass = () => {  // ROGUE
 
     playerRogue = new Player('player', 'rogue', 170, 25, 7, 4, 12, 10, 'Sinister Strike', 'Instant Poison', true);
     prepPlayerCard(playerRogue);
-    htmlClassImage.src = 'images/rog-char-3.jpg';
+    htmlClassImage.src = pickRandImage('rogue');
     htmlSkill1Btn.innerHTML = playerRogue.skill1Name;
     htmlSkill2Btn.innerHTML = playerRogue.skill2Name;
 
@@ -428,6 +495,7 @@ const playerSelectRogClass = () => {  // ROGUE
     playerClass = playerRogue.className;
     newPlayerHealth = playerRogue.health;
     newPlayerMana = playerRogue.mana;
+    skill1Info('rogue');
 }
 
 const playerSelectMagClass = () => {  // MAGE
@@ -442,14 +510,15 @@ const playerSelectMagClass = () => {  // MAGE
 
     playerMage = new Player('player', 'mage', 140, 100, 4, 12, 8, 10, 'Fire Ball', 'Polymorph', true);
     prepPlayerCard(playerMage);
-    htmlClassImage.src = 'images/mag-char-5.jpg';
-    htmlSkill1Btn.innerHTML = playerMage.skill1Name;
+    htmlClassImage.src = pickRandImage('mage');
+    htmlSkill1Btn.innerHTML = playerMage.skill1Name; // + htmlSkill1Btn.innerHTML  this adds the inner html to after the skill name
     htmlSkill2Btn.innerHTML = playerMage.skill2Name;
 
     printFightTextPreFight();
     playerClass = playerMage.className;
     newPlayerHealth = playerMage.health;
     newPlayerMana = playerMage.mana;
+    skill1Info('mage');
 }
 
 
@@ -505,6 +574,8 @@ const checkHealth = () => {
         htmlSection3NextGame.classList.remove('nextGameBtn');
     }
 }
+
+
 
 // Prepares the game, first section, adds event listeners for class select.
 const prepareGame = () => {
@@ -820,7 +891,7 @@ const prepNextGame = () => {
         playerWarrior = new Player('player', 'warrior', 220, 25, 12, 4, 8, 10, 'Mortal Strike', 'Charge', true);
         resetPlayerCard();
         prepPlayerCard(playerWarrior);
-        htmlClassImage.src = 'images/war-char-2.jpg';
+        htmlClassImage.src = pickRandImage('warrior')
         htmlSkill1Btn.innerHTML = playerWarrior.skill1Name;
         htmlSkill2Btn.innerHTML = playerWarrior.skill2Name;
         playerClass = playerWarrior.className;
@@ -832,7 +903,7 @@ const prepNextGame = () => {
         playerRogue = new Player('player', 'rogue', 170, 25, 6, 4, 12, 10, 'Sinister Strike', 'Instant Poison', true);
         resetPlayerCard();
         prepPlayerCard(playerRogue);
-        htmlClassImage.src = 'images/rog-char-3.jpg';
+        htmlClassImage.src = pickRandImage('rogue')
         htmlSkill1Btn.innerHTML = playerRogue.skill1Name;
         htmlSkill2Btn.innerHTML = playerRogue.skill2Name;
         playerClass = playerRogue.className;
@@ -844,7 +915,7 @@ const prepNextGame = () => {
         playerMage = new Player('player', 'mage', 140, 100, 4, 12, 8, 10, 'Fire Ball', 'Polymorph', true);
         resetPlayerCard();
         prepPlayerCard(playerMage);
-        htmlClassImage.src = 'images/mag-char-5.jpg';
+        htmlClassImage.src = pickRandImage('mage')
         htmlSkill1Btn.innerHTML = playerMage.skill1Name;
         htmlSkill2Btn.innerHTML = playerMage.skill2Name;
         playerClass = playerMage.className;

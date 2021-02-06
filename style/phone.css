@@ -1,0 +1,1158 @@
+/* Laptop Screens */
+@media only screen and (max-width: 1200px) {
+  /* General Styles */
+  html {
+    overflow: hidden;
+  }
+
+  body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+
+  body {
+    height: 100vh;
+  }
+
+  .sectionDefault {
+    width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .turnsWins {
+    font-size: 1.65rem;
+    padding: 8px 8px;
+
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
+  .maxLogo {
+    padding-right: 5px;
+    width: 150px;
+    height: auto;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  .version {
+    font-size: 1.75rem;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  /* -------------------- */
+
+
+  /* Section #1 */
+  .sectionStartInside{
+    height: 80vh;
+    width: 80vw;
+    margin: 0 10vw;
+    padding: 60px 0 0 0;
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+  }
+
+  .h1ChooseClass {
+    font-size: 5.5rem;
+    grid-column: span 1;
+    align-self: flex-end;
+  }
+
+  .classCard {
+    width: 85%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.75rem;
+    margin: 15px 0 0 0;
+    padding: 5px;
+    background-image: linear-gradient(to top, rgba(82, 37, 70, 0.85), rgba(136, 48, 78, 0.5));
+  }
+
+  .img > img {
+    width: 130px; /*changes img size*/
+    height: 130px;
+  }
+  /* -------------------- */
+
+
+
+  /* Section #2 */
+  #muteMusicImg {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin: 7px;
+    width: 60px;
+    height: 60px;
+  }
+
+  /*PLAYER*/
+  .sectionGameInside {
+    padding: 0;
+    margin: 20px 15vw 0 15vw;
+  }
+
+  .playerView {
+    width: 70vw;
+    height: 30vh;
+    padding: 10px 10px 0px 10px;
+    background: linear-gradient(to bottom, rgba(34, 40, 49, 0.65),rgba(41, 89, 57, 1));
+  }
+
+  .charInfo {
+    gap: 10px;
+    width: 85vw;
+    height: 20vh;
+    margin-bottom: 5px;
+
+  }
+
+  .charInfo > img {
+    width: 160px;
+    height: 160px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .statsBoxSec2 {
+    font-size: 1.8rem;
+  }
+
+  .skillBar {
+    width: 70vw;
+    height: 50px;
+    margin: 5px;
+    padding-top: 20px;
+    gap: 5px;
+  }
+
+  .skillBar > h2 {
+    font-size: 2.2rem;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* --------------------- */
+
+
+
+  /*CONSOLE*/
+  .consoleView {
+    width: 70vw;
+    height: 26vh;
+    margin: 5px auto;
+    padding: 10px;
+    background: linear-gradient(to bottom, rgba(49, 29, 63, 0.8),rgba(136, 48, 78, 0.8));
+  }
+
+  .consoleList > li {
+    font-size: 1.3rem;
+  }
+
+
+  /* ---------------------- */
+
+
+
+  /*ENEMY*/
+  .enemyView {
+    width: 70vw;
+    height: 22vh;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(34, 40, 49, 0.75),rgba(41, 89, 57, 1));
+  }
+
+  .enemyInfo {
+    gap: 10px;
+    width: 85vw;
+    height: 20vh;
+    margin-bottom: 5px;
+  }
+
+  .enemyInfo > img {
+    width: 160px;
+    height: 160px;
+    justify-self: center;
+    align-self: center;
+  }
+  /* ---------------------- */
+
+
+
+  /* Section #3 */
+  .sectionEnd{
+    margin: 70px auto;
+    width: 90vw;
+    height: 85vh;
+    background-color: rgba(0,0,0,0.825);
+  }
+
+  .sectionEnd > h1 {
+    font-size: 6rem;
+    padding-top: 170px;
+  }
+
+  .endGameBox {
+    width: 80vw;
+    height: 100px;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .endGameBox > button {
+    flex-basis: 40px;
+    flex-grow: 1;
+    margin: 15px;
+    padding: 10px;
+    font-size: 3rem;
+  }
+}
+
+/* Medium Screens */
+@media only screen and (max-width: 768px) {
+    html {
+        overflow: visible;
+    }
+
+    .turnsWins {
+        font-size: 1.25rem;
+        gap: 5px;
+    }
+
+    .maxLogo {
+        width: 125px;
+        height: auto;
+    }
+
+    .version {
+        font-size: 1.5rem;
+    }
+
+    /* -------------------- */
+
+
+    /* Section #1 */
+    .sectionStartInside{
+        padding: 80px 0 0 0;
+    }
+
+    .h1ChooseClass {
+        font-size: 4.5rem;
+    }
+
+    /* -------------------- */
+
+
+
+    /* Section #2 */
+    #muteMusicImg {
+        margin: 5px;
+        width: 50px;
+        height: 50px;
+    }
+
+    /*PLAYER*/
+    .sectionGameInside {
+        margin: 50px 10vw 0 12vw;
+    }
+
+    .playerView {
+        width: 75vw;
+        padding: 10px;
+    }
+
+    .charInfo > img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .skillBar {
+        width: 75vw;
+        height: 60px;
+        padding: 10px 3px 0 0;
+    }
+
+    .skillBar > h2 {
+        font-size: 2rem;
+        padding: 0;
+        margin: 0;
+    }
+    /* --------------------- */
+
+
+
+    /*CONSOLE*/
+    .consoleView {
+        width: 75vw;
+        height: 200px;
+    }
+
+    .consoleList > li {
+        font-size: 1.25rem;
+    }
+    /* ---------------------- */
+
+
+
+    /*ENEMY*/
+    .enemyView {
+        width: 75vw;
+    }
+    
+    .enemyInfo > img {
+        width: 160px;
+        height: 160px;
+    }
+    /* ---------------------- */
+    
+    
+    
+    /* Section #3 */
+
+
+    /* ---------------------- */
+
+}
+
+/* Small Screens */
+@media only screen and (max-width: 480px) {
+    .turnsWins {
+        font-size: 1rem;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .maxLogo {
+        width: 100px;
+    }
+
+    .version {
+        font-size: 1rem;
+    }
+
+    /* -------------------- */
+
+
+    /* Section #1 */
+    .sectionStartInside{
+        height: 90vh;
+        padding: 0;
+    }
+
+    .h1ChooseClass {
+        font-size: 3rem;
+        padding-top: 20px;
+    }
+
+    .classCard {
+        width: auto;
+        height: auto;
+        font-size: 1rem;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .img > img {
+        width: 75px; /*changes img size*/
+        height: 75px;
+    }
+
+    /* -------------------- */
+
+
+
+    /* Section #2 */
+    #muteMusicImg {
+        margin: 3px;
+        width: 35px;
+        height: 35px;
+    }
+
+    /*PLAYER*/
+    .sectionGameInside {
+        margin: 35px 5vw 0 5vw;
+    }
+
+    .playerView {
+        width: 80vw;
+        padding: 10px;
+    }
+
+    .charInfo > img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .statsBoxSec2 {
+        font-size: 1.25rem;
+    }
+
+    .skillBar {
+        width: 80vw;
+        height: 40px;
+        padding: 0;
+    }
+    
+    .skillBar > h2 {
+        font-size: 1.4rem;
+        padding: 5px;
+        margin: 0;
+    }
+    /* --------------------- */
+
+
+
+    /*CONSOLE*/
+    .consoleView {
+        width: 80vw;
+        height: 26vh;
+    }
+
+    .consoleList > li {
+        font-size: 1.05rem;
+    }
+    /* ---------------------- */
+
+
+
+    /*ENEMY*/
+    .enemyView {
+        width: 80vw;
+        height: 19vh;
+    }
+
+    .enemyInfo > img {
+        width: 120px;
+        height: 120px;
+    }
+    /* ---------------------- */
+
+
+
+    /* Section #3 */
+    .sectionEnd{
+        margin: 35px auto;
+    }
+    
+    .sectionEnd > h1 {
+        font-size: 4rem;
+        padding-top: 65px;
+    }
+    
+    .endGameBox {
+        margin-top: 40px;
+    }
+    
+    .endGameBox > button {
+        margin: 10px;
+        font-size: 2rem;
+    }
+}
+
+/* Extra Small Screens */
+@media only screen and (max-width: 320px) {
+    .h1ChooseClass {
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+    
+    .classCard{
+        font-size: 1rem;
+        padding: 3px;
+    }
+
+    .img > img {
+        width: 50px; /*changes img size*/
+        height: 50px;
+    }
+    
+    .statsBoxSec2 {
+        font-size: 1rem;
+    }
+    
+    .skillBar {
+        width: 82vw;
+        height: 30px;
+        margin: 5px;
+    }
+    
+    .skillBar > h2 {
+        font-size: 1.2rem;
+        padding: 2px;
+    }
+    
+    .charInfo > img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .enemyInfo > img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .consoleView {
+        height: 20vh;
+    }
+    
+    .consoleList > li {
+        font-size: 0.75rem;
+    }
+}
+
+
+
+
+
+/* Landscape Support */
+/* Laptop Screens */
+@media only screen and (max-width: 1200px) and (orientation : landscape) {
+  /* General Styles */
+  html {
+    overflow: visible;
+  }
+
+  body {
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover; 
+  }
+
+  body {
+    height: 100vh;
+  }
+
+  .sectionDefault {
+    width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .turnsWins {
+    font-size: 1.65rem;
+    padding: 8px 8px;
+
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
+  .maxLogo {
+    padding-right: 5px;
+    width: 150px;
+    height: auto;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  .version {
+    font-size: 1.75rem;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  /* -------------------- */
+
+
+  /* Section #1 */
+  .sectionStartInside{
+    height: 80vh;
+    width: 80vw;
+    margin: 0 10vw;
+    padding: 60px 0 0 0;
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+  }
+
+  .h1ChooseClass {
+    font-size: 5.5rem;
+    grid-column: span 1;
+    align-self: flex-end;
+  }
+
+  .classCard {
+    width: 85%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.75rem;
+    margin: 15px 0 0 0;
+    padding: 5px;
+    background-image: linear-gradient(to top, rgba(82, 37, 70, 0.85), rgba(136, 48, 78, 0.5));
+  }
+
+  .img > img {
+    width: 130px; /*changes img size*/
+    height: 130px;
+  }
+  /* -------------------- */
+
+
+
+  /* Section #2 */
+  #muteMusicImg {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin: 7px;
+    width: 60px;
+    height: 60px;
+  }
+
+  /*PLAYER*/
+  .sectionGameInside {
+    padding: 0;
+    margin: 20px 15vw 0 15vw;
+  }
+
+  .playerView {
+    width: 70vw;
+    height: 32vh;
+    padding: 10px 10px 0px 10px;
+    background: linear-gradient(to bottom, rgba(34, 40, 49, 0.65),rgba(41, 89, 57, 1));
+  }
+
+  .charInfo {
+    gap: 10px;
+    width: 70vw;
+    height: 20vh;
+    margin-bottom: 5px;
+
+  }
+
+  .charInfo > img {
+    width: 160px;
+    height: 160px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .statsBoxSec2 {
+    font-size: 1.4rem;
+  }
+
+  .skillBar {
+    width: 70vw;
+    height: 50px;
+    margin: 5px;
+    padding-top: 20px;
+    gap: 5px;
+  }
+
+  .skillBar > h2 {
+    font-size: 2.2rem;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* --------------------- */
+
+
+
+  /*CONSOLE*/
+  .consoleView {
+    width: 60vw;
+    height: 26vh;
+    margin: 5px 0px 0px 50px;
+    padding: 10px;
+    background: linear-gradient(to bottom, rgba(49, 29, 63, 0.8),rgba(136, 48, 78, 0.8));
+  }
+
+  .consoleList > li {
+    font-size: 1.3rem;
+  }
+
+
+  /* ---------------------- */
+
+
+
+  /*ENEMY*/
+  .enemyView {
+    width: 72vw;
+    height: 25vh;
+    padding: 0;
+    padding-bottom: 15px;
+    background: linear-gradient(to top, rgba(34, 40, 49, 0.75),rgba(41, 89, 57, 1));
+  }
+
+  .enemyInfo {
+    gap: 10px;
+    width: 70vw;
+    height: 20vh;
+    margin-bottom: 5px;
+  }
+
+  .enemyInfo > img {
+    width: 160px;
+    height: 160px;
+    justify-self: center;
+    align-self: center;
+  }
+  /* ---------------------- */
+
+
+
+  /* Section #3 */
+  .sectionEnd{
+    margin: 70px auto;
+    width: 90vw;
+    height: 85vh;
+    background-color: rgba(0,0,0,0.825);
+  }
+
+  .sectionEnd > h1 {
+    font-size: 6rem;
+    padding-top: 170px;
+  }
+
+  .endGameBox {
+    width: 80vw;
+    height: 100px;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .endGameBox > button {
+    flex-basis: 40px;
+    flex-grow: 1;
+    margin: 15px;
+    padding: 10px;
+    font-size: 3rem;
+  }
+}
+
+
+/* Small Laptop/Tablet Screens */
+@media only screen and (max-width: 1000px) and (orientation : landscape) {
+  /* General Styles */
+  body {
+    height: 120vh;
+  }
+
+  .turnsWins {
+    font-size: 1.5rem;
+    padding: 10px 5px;
+  }
+
+  .maxLogo {
+    width: 125px;
+    height: auto;
+  }
+
+  .version {
+    font-size: 1.5rem;
+  }
+  /* -------------------- */
+
+
+  /* Section #1 */
+  .sectionStartInside{
+    padding: 30px 0 0 0;
+  }
+
+  .h1ChooseClass {
+    font-size: 5rem;
+  }
+
+  .classCard {
+    font-size: 1.5rem;
+  }
+
+  .img > img {
+    width: 115px; /*changes img size*/
+    height: 115px;
+  }
+  /* -------------------- */
+
+
+
+  /* Section #2 */
+  #muteMusicImg {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+  }
+
+  /*PLAYER*/
+  .sectionGameInside {
+    padding: 0;
+    margin: 20px 15vw 0 15vw;
+  }
+
+  .playerView {
+    height: 35vh;
+  }
+
+  .charInfo > img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .statsBoxSec2 {
+    font-size: 1.4rem;
+  }
+  /* --------------------- */
+
+
+
+  /*CONSOLE*/
+
+  .consoleList > li {
+    font-size: 1.1rem;
+  }
+  /* ---------------------- */
+
+
+
+  /*ENEMY*/
+
+  .enemyInfo > img {
+    width: 140px;
+    height: 140px;
+  }
+  /* ---------------------- */
+
+
+
+  /* Section #3 */
+
+  /* ---------------------- */
+}
+
+
+/* Small Tablet Screens */
+@media only screen and (max-width: 900px) and (orientation : landscape) {
+    /* General Styles */
+  body {
+    height: 130vh;
+  }
+
+  .turnsWins {
+    font-size: 1.25rem;
+    padding: 10px 5px;
+  }
+
+  .maxLogo {
+    width: 110px;
+    height: auto;
+  }
+
+  .version {
+    font-size: 1.25rem;
+  }
+  /* -------------------- */
+
+
+  /* Section #1 */
+  .sectionStartInside{
+    padding: 30px 0 0 0;
+  }
+
+  .h1ChooseClass {
+    font-size: 4.5rem;
+  }
+
+  .classCard {
+    font-size: 1.25rem;
+    margin: 10px 0 0 0;
+  }
+
+  .img > img {
+    width: 100px; /*changes img size*/
+    height: 100px;
+  }
+  /* -------------------- */
+
+
+
+  /* Section #2 */
+  #muteMusicImg {
+    margin: 5px;
+    width: 45px;
+    height: 45px;
+  }
+
+  /*PLAYER*/
+  .playerView {
+    height: 40vh;
+  }
+
+  .charInfo > img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .skillBar {
+    padding-top: 30px;
+  }
+
+  .skillBar > h2 {
+    font-size: 2rem;
+  }
+  /* --------------------- */
+
+
+
+  /*CONSOLE*/
+  .consoleView {
+    width: 50vw;
+    margin: 5px 20px 0px 80px;
+  }
+
+  .consoleList > li {
+    font-size: 1rem;
+  }
+
+
+  /* ---------------------- */
+
+
+
+  /*ENEMY*/
+  .enemyView {
+    height: 30vh;
+    padding: 10px 0; 
+  }
+
+  .enemyInfo {
+    height: 30vh;
+  }
+
+  .enemyInfo > img {
+    width: 150px;
+    height: 150px;
+  }
+  /* ---------------------- */
+
+
+
+  /* Section #3 */
+  .sectionEnd{
+    height: 80vh;
+  }
+
+  .sectionEnd > h1 {
+    font-size: 5.5rem;
+    padding-top: 100px;
+  }
+}
+
+
+@media only screen and (max-width: 850px) and (orientation : landscape) {
+    /* General Styles */
+    body {
+        height: 200vh;
+    }
+    
+    .turnsWins {
+        font-size: 1.2rem;
+    }
+    
+    .maxLogo {
+        width: 90px;
+        height: auto;
+    }
+
+    /* -------------------- */
+    
+    
+    /* Section #1 */
+
+    /* -------------------- */
+    
+    
+    
+    /* Section #2 */
+    #muteMusicImg {
+        margin: 5px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    /*PLAYER*/
+    .playerView {
+        height: 70vh;
+    }
+    
+    .charInfo > img {
+        width: 115px;
+        height: 115px;
+    }
+
+    .skillBar {
+        padding-top: 65px;
+    }
+    
+    .skillBar > h2 {
+        font-size: 1.85rem;
+    }
+    /* --------------------- */
+    
+    
+    
+    /*CONSOLE*/
+    .consoleView {
+        width: 50vw;
+        height: 45vh;
+        margin: 0px 20px 0px 80px;
+    }
+    
+    .consoleList > li {
+        font-size: 1rem;
+    }
+    
+    
+    /* ---------------------- */
+    
+    
+    
+    /*ENEMY*/
+    .enemyView {
+        height: 50vh;
+        padding: 10px 0; 
+    }
+    
+    .enemyInfo {
+        height: 55vh;
+    }
+    
+    .enemyInfo > img {
+        width: 130px;
+        height: 130px;
+    }
+    /* ---------------------- */
+    
+    
+    
+    /* Section #3 */
+    .sectionEnd{
+        height: 150vh;
+    }
+    
+    .sectionEnd > h1 {
+        font-size: 5rem;
+        padding-top: 100px;
+    }
+}
+
+
+
+@media only screen and (max-width: 675px) and (orientation : landscape) {
+    /* General Styles */
+    body {
+        height: 200vh;
+    }
+    
+    .turnsWins {
+        font-size: 1.2rem;
+    }
+    
+    .maxLogo {
+        width: 90px;
+        height: auto;
+    }
+
+    /* -------------------- */
+    
+    
+    /* Section #1 */
+
+    /* -------------------- */
+    
+    
+    
+    /* Section #2 */
+    #muteMusicImg {
+        margin: 5px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    /*PLAYER*/
+    .playerView {
+        height: 75vh;
+    }
+    
+    .charInfo > img {
+        width: 115px;
+        height: 115px;
+    }
+
+    .skillBar {
+        padding-top: 70px;
+    }
+    
+    .skillBar > h2 {
+        font-size: 1.65rem;
+    }
+    /* --------------------- */
+    
+    
+    
+    /*CONSOLE*/
+    .consoleView {
+        width: 50vw;
+        height: 55vh;
+        margin: 0px 20px 0px 80px;
+    }
+    
+    .consoleList > li {
+        font-size: 1rem;
+    }
+    
+    
+    /* ---------------------- */
+    
+    
+    
+    /*ENEMY*/
+    .enemyView {
+        height: 55vh;
+        padding: 10px 0; 
+    }
+    
+    .enemyInfo {
+        height: 55vh;
+    }
+    
+    .enemyInfo > img {
+        width: 130px;
+        height: 130px;
+    }
+    /* ---------------------- */
+    
+    
+    
+    /* Section #3 */
+    .sectionEnd{
+        height: 180vh;
+    }
+    
+    .sectionEnd > h1 {
+        font-size: 5rem;
+        padding-top: 100px;
+    }
+}
