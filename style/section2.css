@@ -92,12 +92,12 @@
     font-size: 3rem;
 }
 
-.skillBar > h2:hover + #hiddenSkill1Div {
+/* .skillBar > h2:hover + #hiddenSkill1Div {
     display: block;
 }
 .skillBar > h2:hover + #hiddenSkill2Div {
     display: block;
-}
+} */
 
 .skillBar > h2:hover {
     cursor: pointer;

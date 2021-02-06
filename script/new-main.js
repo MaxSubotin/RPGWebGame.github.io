@@ -950,9 +950,29 @@ const prepClassSelect = () => {
 }
 
 
+const mouseOverSkill1Info = () => {
+
+}
+
+const mouseOverSkill2Info = () => {
+}
+
 
 htmlSkill1Btn.addEventListener('click', playerSkill1 );
 htmlSkill2Btn.addEventListener('click', playerSkill2 );
 htmlSection3NextGame.addEventListener('click', prepNextGame);
 htmlSection3ClassSelect.addEventListener('click', prepClassSelect);
 htmlAutoAttackBtn.addEventListener('click', autoAttackBtnFunction);
+
+htmlSkill1Btn.addEventListener("mouseover", function() {
+    htmlSkill1Info.setAttribute("style","display: block");
+});
+htmlSkill2Btn.addEventListener("mouseover", function() {
+    htmlSkill2Info.setAttribute("style","display: block");
+});
+htmlSkill1Btn.addEventListener("mouseout", function() {
+    htmlSkill1Info.setAttribute("style","display: none");
+});
+htmlSkill2Btn.addEventListener("mouseout", function(){
+    htmlSkill2Info.setAttribute("style","display: none");
+});
