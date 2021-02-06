@@ -629,6 +629,16 @@
     height: 60px;
   }
 
+  #hiddenSkill1Div, #hiddenSkill2Div {
+    display: none;
+  }
+  .skillBar > h2:hover + #hiddenSkill1Div {
+    display: none;
+  }
+  .skillBar > h2:hover + #hiddenSkill2Div {
+    display: none;
+  }
+  
   /*PLAYER*/
   .sectionGameInside {
     padding: 0;
