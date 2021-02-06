@@ -605,7 +605,7 @@ const autoAttackBtnFunction = () => {
     }
 
     //makes sure that the console does not over flow with damage lines
-    if (htmlDamageConsoleUL.childNodes.length > 9){
+    if (htmlDamageConsoleUL.childNodes.length > 10){
         htmlDamageConsoleUL.firstChild.parentNode.removeChild(htmlDamageConsoleUL.firstChild);
         htmlDamageConsoleUL.firstChild.parentNode.removeChild(htmlDamageConsoleUL.firstChild);
     }
@@ -688,7 +688,7 @@ const playerSkill1 = () => {
     }
 
     //makes sure that the console does not over flow with damage lines
-    if (htmlDamageConsoleUL.childNodes.length > 9){
+    if (htmlDamageConsoleUL.childNodes.length > 10){
         htmlDamageConsoleUL.firstChild.parentNode.removeChild(htmlDamageConsoleUL.firstChild);
         htmlDamageConsoleUL.firstChild.parentNode.removeChild(htmlDamageConsoleUL.firstChild);
     }
@@ -797,7 +797,7 @@ const playerSkill2 = () => {
     }
 
     //makes sure that the console does not over flow with damage lines
-    if (htmlDamageConsoleUL.childNodes.length > 9){
+    if (htmlDamageConsoleUL.childNodes.length > 10){
         htmlDamageConsoleUL.firstChild.parentNode.removeChild(htmlDamageConsoleUL.firstChild);
         htmlDamageConsoleUL.firstChild.parentNode.removeChild(htmlDamageConsoleUL.firstChild);
     }
