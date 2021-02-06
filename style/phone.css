@@ -240,7 +240,7 @@
 
     .turnsWins {
         font-size: 1.25rem;
-        gap: 5px;
+        gap: 10px;
     }
 
     .maxLogo {
@@ -468,8 +468,10 @@
     }
     
     .endGameBox > button {
-        margin: 10px;
-        font-size: 1.5rem;
+        margin: 5px;
+        padding: 0;
+        font-size: 1rem;
+        border-radius: 5px;
     }
 }
 
