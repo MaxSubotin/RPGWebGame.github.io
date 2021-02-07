@@ -98,15 +98,14 @@
     height: 60px;
   }
 
-  #hiddenSkill1Div, #hiddenSkill2Div {
+  #hiddenSkill1Div, #hiddenSkill2Div, .skillInfoText {
     display: none;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 0px;
+    font-size: 0;
   }
-  /* .skillBar > h2:hover + #hiddenSkill1Div {
-    display: none;
-  }
-  .skillBar > h2:hover + #hiddenSkill2Div {
-    display: none;
-  } */
 
   /*PLAYER*/
   .sectionGameInside {
@@ -469,7 +468,9 @@
     
     .endGameBox > button {
         margin: 5px;
-        padding: 0;
+        padding: 15px;
+        flex-basis: 0px;
+        flex-grow: 0;
         font-size: 1rem;
         border-radius: 5px;
     }
@@ -1177,4 +1178,13 @@
         font-size: 5rem;
         padding-top: 100px;
     }
+
+    .endGameBox > button {
+      margin: 10px;
+      padding: 15px;
+      flex-basis: 0px;
+      flex-grow: 0;
+      font-size: 1rem;
+      border-radius: 5px;
+  }
 }

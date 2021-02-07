@@ -950,14 +950,6 @@ const prepClassSelect = () => {
 }
 
 
-const mouseOverSkill1Info = () => {
-
-}
-
-const mouseOverSkill2Info = () => {
-}
-
-
 htmlSkill1Btn.addEventListener('click', playerSkill1 );
 htmlSkill2Btn.addEventListener('click', playerSkill2 );
 htmlSection3NextGame.addEventListener('click', prepNextGame);
